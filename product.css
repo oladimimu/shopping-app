@@ -1,0 +1,120 @@
+    body{
+        background: linear-gradient(235deg,#1f2468,#203907);
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        margin-top: 10px;
+    }
+    .View button{
+        padding: 10px;
+        border: none;
+        border-radius: 15px;
+        background:  linear-gradient(235deg, #25e23e,#599bd4,#4dc388);
+        color: #f5f4f4;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 2px 2px 4px rgb(121, 151, 182);
+
+        
+    }
+    .View button:focus{
+        color: rgb(235, 117, 74);
+        transition: 0.3s;
+        box-shadow: 2px 2px 4px rgb(75, 78, 81);
+    }
+    button:hover{
+        margin-left: 4px;
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgb(121, 151, 182);
+    }
+    .ourshop{
+        text-align: center;
+        justify-content: center;
+    }
+    .ourshop h1{
+        font-size: 50px;
+        text-transform: capitalize;
+        color: rgb(237, 209, 185);
+    }
+    .ourshop p{
+        font-size: 20px;
+        font-weight: bold;
+        color: #c9cae2;
+    }
+    .product{
+        background: linear-gradient(235deg, #25e23e, #1f2468, #7bff00);
+        /* make space for animation */
+        background-size: 400% 400%; 
+        animation: moveBg 10s ease infinite;
+        border: 1px solid #7abdff;
+        border-radius: 14px;
+        padding: 12px;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+    .product:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgb(121, 151, 182);
+    }
+    @keyframes moveBg {
+        0% { background-position: 0% 15%; }
+        50% { background-position: 130% 70%; }
+        100% { background-position: 30% 100%; }
+    }
+    .product img{
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .product h2{
+        font-size: 19px;
+        margin: 14px 4px 6px;
+        color: #e8e1e1;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+    }
+    .product p{
+        font-size: 19px;
+        font-weight: bold;
+        margin: 0px 4px 14px;
+        color: bisque;
+        font-family:Georgia, Times, 'Times New Roman', serif;
+    }
+    .product button{
+        width: 100%;
+        padding: 11px;
+        border: none;
+        border-radius: 18px;
+        background:  linear-gradient(235deg, #25e23e,#544747,#1f2468);
+        color: #e9e7e7;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .product button:focus{
+        background-color: #25e23e;
+        margin: 5px;
+    }
+    @media (max-width:900px) {
+        .product{
+           grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media (max-width:650px){
+        .products{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (max-width:400px) {
+        .products{
+            grid-template-columns: 1fr;
+        }
+    }
+    

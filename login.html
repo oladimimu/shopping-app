@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longin</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility_off" />
+    <!-- <link rel="stylesheet" href="product.css"> -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person_add" />
+
+    <style>
+        *{
+            text-align: center;
+            justify-content: center;
+            margin-top: 0px;
+            padding: auto;
+
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#515e6aff, #49bffe,#515e6a);
+            color: #f1e4e4;
+            font-weight: 800;
+            display: flex;
+            padding: 13px;
+            
+        }
+      
+        input{
+            /* padding: 10px 30px; */
+            margin: 10px;
+            border-radius: 12px;
+            font-size: 17px;
+            /* width: 323px; */
+            padding: 10px 15px;
+            margin: 5px;
+            padding-top: 20px;
+            font-size: large;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            color: white;
+            letter-spacing: 1px;
+            background-color: rgb(0, 0, 0);
+        }
+        .register-container{
+            text-align: center;
+            justify-content: center;
+            margin: 30px;
+            padding: 20px;
+            background: linear-gradient(rgb(60, 60, 172) 0%,rgb(106, 178, 255) 2%,#435775);
+            width: 285px;
+            border-radius: 10px;
+            box-shadow: 1px 2px 1px rgb(0, 0, 0);
+            margin-top: 100px;
+        }
+        button{
+            width: 250px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 17px;
+            color: white;
+            font-weight: 800;
+            background: rgb(116, 116, 224);
+            border: none;
+            box-shadow: 1px 1px 1px rgb(21, 23, 27);
+        }
+        h1{
+            width: 300px;
+            color: #fff;
+            text-transform: capitalize;
+            
+        }
+        a{
+           text-decoration: none;
+            margin-left: 5px;
+            color: white;
+         
+        }
+        a:hover{
+           text-decoration: underline;
+           color: rgb(255, 255, 255);
+        }
+        p{
+            font-size: 19px;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            /* margin: 10px; */
+            color: #fff;
+        }
+        .password-box{
+            position: relative;
+            display: inline-block;
+        }
+        .password-box input{
+            padding-right: 17px;
+        }
+        .password-box svg{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        button:focus{
+            background: #000;
+            margin: 2px;
+            color: #fff;
+        }
+        .name-box{
+            position: relative;
+            display: inline-block;
+        }
+        .name-box input{
+            padding-right: 17px;
+        }
+        .name-box svg{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        @media(max-width: 700px){
+            .register-container{
+                margin: 0%;
+                padding: auto;
+                justify-content: center;
+                text-align: center;
+                border: none;
+                background: none;
+                box-shadow: none;
+                margin-top: 100px;
+                
+
+            }
+            body{
+                background: linear-gradient(#49bffe,#515e6aff 10%);
+                overflow-x: hidden;
+                flex-wrap: wrap;
+                
+            }
+            input{
+                border-bottom-right-radius: 19px;
+                border-bottom: #fcfcfc;
+            }
+            h1{
+                font-size: 20px;
+                margin-left: 5px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        
+         /* @media (max-width: 600px) {
+        .register-container {
+            flex-wrap: wrap;
+            margin: 10px;
+            padding: 10px;
+            overflow-x: hidden;
+            border: 1px solid #4b84e8;
+            box-shadow: 1px 3px 2px;
+            background-color: #000;
+        }
+        body{
+            background: #000;
+        }
+    }  */
+    </style>
+</head>
+<body>
+     <div class="register-container">
+        <h1>Sign in to continue</h1>
+        <p>Login to continue shopping</p>
+        <div class="name-box">
+             <input type="text" id="loginName" placeholder="Full Name">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80ZM247-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q440-607 440-640t-23.5-56.5Q393-720 360-720t-56.5 23.5Q280-673 280-640t23.5 56.5Q327-560 360-560t56.5-23.5ZM360-640Zm0 400Z"/></svg>
+        </div>
+        <div class="password-box">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <svg onclick="showPassword()" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="m637-425-62-62q4-38-23-65.5T487-576l-62-62q13-5 27-7.5t28-2.5q70 0 119 49t49 119q0 14-2.5 28t-8.5 27Zm133 133-52-52q36-28 65.5-61.5T833-480q-49-101-144.5-158.5T480-696q-26 0-51 3t-49 10l-58-58q38-15 77.5-21t80.5-6q143 0 261.5 77.5T912-480q-22 57-58.5 103.5T770-292Zm-2 202L638-220q-38 14-77.5 21t-80.5 7q-143 0-261.5-77.5T48-480q22-57 58-104t84-85L90-769l51-51 678 679-51 51ZM241-617q-35 28-65 61.5T127-480q49 101 144.5 158.5T480-264q26 0 51-3.5t50-9.5l-45-45q-14 5-28 7.5t-28 2.5q-70 0-119-49t-49-119q0-14 3.5-28t6.5-28l-81-81Zm287 89Zm-96 96Z"/></svg>
+        </div>
+        <button onclick="loginUser()">Login</button>
+        <p id="loginMessage"></p>
+        <p>Don't have an account?<a href="register.html">Register</a></p>
+    </div>
+    <script>
+        const loginUser = () => {
+            let user = JSON.parse(localStorage.getItem("user"));
+            if (!user) {
+                loginMessage.innerText = "You don't have an account. Please register.";
+                setTimeout(function () {
+                    window.location.href = "register.html";
+                }, 1000);
+                return;
+            }
+            let name = loginName.value;
+            let password = loginPassword.value;
+            if (name === user.name && password === user.password) {
+                loginMessage.innerText = "Login successful!";
+                localStorage.setItem("loggedIn", "true");
+                setTimeout(function () {
+                    window.location.href = "products.html";
+                }, 1000);
+            } else {
+                loginMessage.innerText = "Wrong name or password";
+            }
+        };
+        const showPassword = () => {
+            if (loginPassword.type === "password") {
+                loginPassword.type = "text";
+            } else {
+                loginPassword.type = "password";
+            }
+        };
+    </script>
+</body>
+</html>

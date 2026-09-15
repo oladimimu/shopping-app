@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+    <div class="shop">
+        <h1 class="ourshop" style="color: antiquewhite;">My Orders </h1>
+        <div id="ordersList"></div>
+        <div class="View">
+            <button onclick="goShopping()">Continue Shopping</button>
+        </div>
+    </div>
+    <script>
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+        const displayOrders = () => {
+            if (orders.length === 0) {
+                ordersList.innerHTML = "<p>You have no orders yet.</p>";
+                return;
+            }
+            ordersList.innerHTML = "";
+            orders.forEach((order, index) => {
+                let totalPrice = 0;
+                order.items.forEach((item) => {
+                    totalPrice += item.price;
+                });
+                ordersList.innerHTML += `
+                    <div class="cart-item">
+                        <h2>Order #${index + 1}</h2>
+                        <p>Date: ${order.date}</p>
+                        <p>Status: <strong>${order.status}</strong></p>
+                        ${order.items.map((item) => `<p>${item.name} - ₦${item.price.toLocaleString()}
+                            </p>`).join("")}<h3>Total: ₦${totalPrice.toLocaleString()}</h3></div>`;
+            });
+        };
+        const goShopping = () => {
+            window.location.href = "products.html";
+        };
+        displayOrders();
+    </script>
+</body>
+</html>
