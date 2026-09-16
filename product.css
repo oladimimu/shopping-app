@@ -1,5 +1,8 @@
     body{
         background: linear-gradient(235deg,#1f2468,#203907);
+        color: #f5f4f4;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
     }
     .products{
         display: grid;
